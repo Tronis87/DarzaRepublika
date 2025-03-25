@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="~/Images/logo.jpg" asp-append-version="true">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Darza Republika</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/DarzaRepublika.styles.css" asp-append-version="true" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+          
+</head>
+<body>
+    <!-- Ikonas augšējā stūrī -->
+    <div class="social-icons-top">
+        <a href="https://www.facebook.com/darza.republika" target="_blank">
+            <img src="~/Images/fb-icon.jpg" alt="Facebook" class="social-icon" />
+        </a>
+        <a href="https://www.instagram.com/darza.republika" target="_blank">
+            <img src="~/Images/ig_icon.png" alt="Instagram" class="social-icon" />
+        </a>
+    </div>
+
+    <!-- 🔸 Jauns wrapper fona attēlam -->
+    <div class="background-wrapper">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom box-shadow">
+                <div class="container d-flex align-items-center justify-content-between">
+                    <a class="navbar-brand d-flex align-items-center" href="#top">
+                        <img src="~/Images/DR_logo.png" alt="Dārza Republika Logo" class="header-logo">
+
+                        <!-- Karodziņi blakus logo -->
+                        <div class="language-switcher d-flex align-items-center ms-3">
+                            <img src="~/Images/flags/lv_flag.png" class="flag-icon me-2" alt="Latviešu" data-lang="lv" />
+                            <img src="~/Images/flags/en_flag.png" class="flag-icon me-2" alt="English" data-lang="en" />
+                            <img src="~/Images/flags/ru_flag.png" class="flag-icon" alt="Русский" data-lang="ru" />
+                        </div>
+                    </a>
+
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="#par-mums" data-key="menu_about">Par Mums</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#pakalpojumi" data-key="menu_services">Pakalpojumi</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#projekti" data-key="menu_projects">Mūsu Projekti</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#kontakti" data-key="menu_contact">Kontakti</a></li>
+                            <div class="language-switcher d-flex align-items-center ms-3">
+                           
+                        </div>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Saturs -->
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
