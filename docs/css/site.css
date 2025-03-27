@@ -1,0 +1,366 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: none;
+  
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    padding-top: 0px;
+}
+
+.layout-container {
+    display: flex;
+    max-width: 1160px;
+    margin: auto;
+    
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 250px;
+    left: 0;
+    width: 180px;
+    height: calc(100vh - 790px);
+    background: #808080;
+    color: #808080;
+    padding: 20px;
+}
+
+    .sidebar nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .sidebar nav ul li {
+            margin-bottom: 15px;
+        }
+
+            .sidebar nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+                display: block;
+            }
+
+                .sidebar nav ul li a:hover {
+                    text-decoration: underline;
+                }
+
+.content {
+    margin-left: 220px;
+    max-width: 750px;
+    padding: 60px;
+    padding-top: 100px;
+}
+
+.header-logo {
+    height: 150px;
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px;
+    padding-top: 120px;
+    padding-right: 10px;
+}
+
+@media (max-width: 990px) {
+    .navbar-nav .nav-item {
+        padding-top: 10px;
+    }
+
+    .content {
+        margin-left: 20px;
+        padding-top: 130px;
+    }
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #a3947b;
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+#par-mums {
+    margin-top: 100px;
+    margin-bottom: 600px;
+}
+
+#pakalpojumi {
+    margin-bottom: 500px;
+}
+
+#projekti {
+    margin-bottom: 900px;
+}
+
+#kontakti {
+    margin-bottom: 200px; /* ← vari pielāgot pēc vajadzības */
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    width: 300px;
+    text-align: center;
+}
+
+    .project img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .project p {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+.service-list {
+    padding-left: 20px;
+    line-height: 1.8;
+    color: #2d2d2d;
+}
+
+    .service-list li {
+        list-style-type: none;
+        position: relative;
+        padding-left: 25px;
+    }
+
+        .service-list li::before {
+            content: "🌿";
+            position: absolute;
+            left: 0;
+        }
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+    .contact-list li {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .contact-list a {
+        color: #2f5d2f;
+        text-decoration: none;
+    }
+
+        .contact-list a:hover {
+            text-decoration: underline;
+        }
+
+.social-header,
+.social-header-mobile {
+    font-size: 14px;
+    color: #333;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+    .social-icon:hover {
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
+
+@media (max-width: 991px) {
+    .social-header {
+        display: none !important;
+    }
+
+    .social-header-mobile {
+        display: flex !important;
+    }
+}
+
+.background-wrapper {
+    min-height: 100vh;
+    background: url('/Images/bg2.png') no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: background-image 0.6s ease-in-out;
+}
+
+.social-icons-top {
+    position: fixed;
+    top: 30px;
+    right: 250px;
+    z-index: 2000;
+    display: flex;
+    gap: 10px;
+}
+
+    .social-icons-top img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+        .social-icons-top img:hover {
+            opacity: 0.8;
+            transform: scale(1.1);
+        }
+.section-content {
+    background-color: rgba(255, 255, 255, 0.85); /* gaišs puscaurspīdīgs fons */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.flag-icon {
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+    object-fit: cover;
+    border-radius: 3px;
+    transition: transform 0.2s ease;
+}
+
+    .flag-icon:hover {
+        transform: scale(1.1);
+    }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 150px; /* ← Tik liels cik tavs fiksētais header/navbar */
+}
+
+section {
+    scroll-margin-top: 150px; /* ← Noder gadījumos, ja scroll nav ar anchor */
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+.modal-content {
+    position: relative;
+    background: transparent;
+    padding: 10px;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#carouselImage {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: all 0.4s ease;
+}
+
+.nav-arrows {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* ļauj klikšķus tikai uz bultiņām, nevis tukšo vietu */
+}
+
+.arrow {
+    pointer-events: all; /* ļauj klikšķināt uz pašas bultiņas */
+    font-size: 48px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+    .arrow:hover {
+        transform: scale(1.2);
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+.close-button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.language-switcher {
+    margin-left: 10px;
+    margin-top: 120px;                                                                                                             0px
+}
+
+.flag-icon {
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+    object-fit: cover;
+    border-radius: 3px;
+    transition: transform 0.2s ease;
+    
+}
+
+    .flag-icon:hover {
+        transform: scale(1.1);
+    }
